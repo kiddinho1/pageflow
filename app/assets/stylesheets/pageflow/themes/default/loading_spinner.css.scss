@@ -10,13 +10,9 @@ $loading-spinner-glow-color: #7595a0 !default;
     background-color: $loading-spinner-background-color !important;
 
     &:before {
-      content: '';
-      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#5ac3ff+0,001428+99 */
+      content: "";
       $radial: 140px;
-      background: -moz-radial-gradient(center, circle, $loading-spinner-glow-color 0%, $loading-spinner-background-color $radial); /* FF3.6-15 */
-      background: -webkit-radial-gradient(center, circle, $loading-spinner-glow-color 0%, $loading-spinner-background-color $radial); /* Chrome10-25,Safari5.1-6 */
-      background: radial-gradient(circle, $loading-spinner-glow-color 0%, $loading-spinner-background-color $radial); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$loading-spinner-glow-color}', endColorstr='#{$loading-spinner-background-color}', GradientType=1); /* IE6-9 fallback on horizontal gradient */
+      background: radial-gradient(circle, $loading-spinner-glow-color 0%, $loading-spinner-background-color $radial); // W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
       background-position: 50% 50%;
       background-repeat: no-repeat;
       background-size: 100% 100%;
@@ -31,9 +27,9 @@ $loading-spinner-glow-color: #7595a0 !default;
     }
 
     @include keyframes(gradientAnimation) {
-      0%   {opacity: 0};
-      50%  {opacity: 1};
-      100% {opacity: 0};
+      0%   { opacity: 0; }
+      50%  { opacity: 1; }
+      100% { opacity: 0; }
     }
 
     .loading_spinner_inner {
@@ -57,7 +53,7 @@ $loading-spinner-glow-color: #7595a0 !default;
   }
 } @else {
   .loading_spinner {
-    background-color: $loading-spinner-background-color !important;
+    background-color: $loading-spinner-background-color;
 
     @if $loading-spinner-background-image == "default" {
       background-image: image-url("pageflow/loading_spinner_glow.jpg");
