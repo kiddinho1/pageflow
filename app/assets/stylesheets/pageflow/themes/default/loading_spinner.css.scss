@@ -27,9 +27,9 @@ $loading-spinner-glow-color: #7595a0 !default;
     }
 
     @include keyframes(gradientAnimation) {
-      0%   { opacity: 0; }
-      50%  { opacity: 1; }
-      100% { opacity: 0; }
+      0%  { opacity: 0; }
+      50% { opacity: 1; }
+      100%{ opacity: 0; }
     }
 
     .loading_spinner_inner {
