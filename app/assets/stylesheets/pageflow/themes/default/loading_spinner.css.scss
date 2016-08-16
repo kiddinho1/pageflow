@@ -3,6 +3,7 @@ $custom-loading-spinner: false !default;
 $loading-spinner-background-image: "default" !default;
 
 $loading-spinner-background-color: #3b5159 !default;
+$loading-spinner-glow-color: #7595a0 !default;
 
 @if not $custom-loading-spinner {
   .loading_spinner {
@@ -12,10 +13,10 @@ $loading-spinner-background-color: #3b5159 !default;
       content: '';
       /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#5ac3ff+0,001428+99 */
       $radial: 140px;
-      background: -moz-radial-gradient(center, circle,  #7595a0 0%, #3b5159 $radial); /* FF3.6-15 */
-      background: -webkit-radial-gradient(center, circle,  #7595a0 0%,#3b5159 $radial); /* Chrome10-25,Safari5.1-6 */
-      background: radial-gradient(circle,  #7595a0 0%,#3b5159 $radial); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7595a0', endColorstr='#3b5159',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+      background: -moz-radial-gradient(center, circle, $loading-spinner-glow-color 0%, $loading-spinner-background-color $radial); /* FF3.6-15 */
+      background: -webkit-radial-gradient(center, circle, $loading-spinner-glow-color 0%, $loading-spinner-background-color $radial); /* Chrome10-25,Safari5.1-6 */
+      background: radial-gradient(circle, $loading-spinner-glow-color 0%, $loading-spinner-background-color $radial); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$loading-spinner-glow-color}', endColorstr='#{$loading-spinner-background-color}', GradientType=1); /* IE6-9 fallback on horizontal gradient */
       background-position: 50% 50%;
       background-repeat: no-repeat;
       background-size: 100% 100%;
