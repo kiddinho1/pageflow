@@ -12,7 +12,7 @@ $loading-spinner-glow-color: #7595a0 !default;
     &:before {
       content: "";
       $radial: 140px;
-      background: radial-gradient(circle, $loading-spinner-glow-color 0%, $loading-spinner-background-color $radial); // W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+
+      @include radial-gradient(circle, $loading-spinner-glow-color 0%, $loading-spinner-background-color $radial);
       background-position: 50% 50%;
       background-repeat: no-repeat;
       background-size: 100% 100%;
